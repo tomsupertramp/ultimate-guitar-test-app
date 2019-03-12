@@ -1,7 +1,4 @@
-// import { get } from 'lodash';
 import axios from 'axios';
-
-// const MAIN_API_URL = 'http://musicbrainz.org/ws/2/release-group/?query=artist:radiohead&fmt=json';
 
 export default (params) => {
   const config = {

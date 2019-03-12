@@ -17,10 +17,8 @@ const album = new schema.Entity('albums', {}, { idAttribute: 'id' });
 function* search({ value }) {
   try {
     const data = yield call(api, value);
-    if (data.count) {
-      const normalizedData = normalize(data['release-groups'], [album]);
-      yield put({ type: types.SEARCH_SUCCESS, data: normalizedData.entities.albums });
-    } 
+    const normalizedData = normalize(data['release-groups'], [album]);
+    yield put({ type: types.SEARCH_SUCCESS, data: normalizedData.entities.albums });
   } catch (e) {
     console.log(e);
   }

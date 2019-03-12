@@ -1,0 +1,46 @@
+.Root {
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .15);
+  display: flex;
+  flex: 0 0 15%;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: all .2s;
+  
+  &:hover {
+    box-shadow: 0 0 9px 2px rgba(0, 0, 0, .15);
+  }
+}
+
+.Button {
+  background: #606060;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  color: #ddc;
+  cursor: pointer;
+  font-size: 14px;
+  height: 30px;
+  outline: none;
+  transition: all .2s;
+
+  &:hover {
+    background: white;
+    border-color: #606060;
+    color: #606060;
+  }
+}
+
+.Title {
+  font-size: 18px;
+  font-weight: bold;
+  max-height: 42px;
+  overflow: hidden;
+}
+
+.Type {
+  color: #ada9a9;
+}

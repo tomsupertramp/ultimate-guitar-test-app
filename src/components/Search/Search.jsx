@@ -1,34 +1,27 @@
-
-// import PropTypes from 'prop-types';
 import React from 'react';
 import { Formik } from 'formik';
 
-/* Components */
-
 /* Styles */
-// import styles from './Search.module.scss';
-
-const propTypes = {};
+import styles from './Search.module.scss';
 
 const Search = ({ search }) => (
   <Formik
     initialValues={{ term: '' }}
     onSubmit={(values) => search(values)}
     render={props => (
-      <form onSubmit={props.handleSubmit}>
+      <form onSubmit={props.handleSubmit} className={styles.Form}>
         <input
+          className={styles.Input}
           type="text"
           onChange={props.handleChange}
           onBlur={props.handleBlur}
           value={props.values.name}
           name="term"
         />
-        <button type="submit">Найти</button>
+        <button type="submit" className={styles.Button}>Найти</button>
       </form>
     )}
   />
 );
-
-Search.propTypes = propTypes;
 
 export default Search;
